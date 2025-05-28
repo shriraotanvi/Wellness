@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mental Health Pal - AI Mood Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="./images/logo.jpg" alt="Logo" style="max-width: 200px; height: auto;" />
+      <p>Your AI Companion for Productivity & Wellness</p>
+    </header>
+
+    <!-- My Daily Insight Section -->
+    <div class="daily-insight">
+      <h3>My Daily Insight</h3>
+      <p id="quote-of-the-day">Loading...</p>
+    </div>
+
+    <section class="card-grid">
+      <div class="card">
+        <h2>Smart Scheduler</h2>
+        <p>Get personalized schedules that help you manage time and tasks effectively.</p>
+        <button>Plan Your Day</button>
+      </div>
+
+      <div class="card">
+        <h2>Journal Writing</h2>
+        <p>Start journaling your emotions, thoughts, or gratitude. It's your private space for reflection and mental clarity.</p>
+        <button>Start Journaling</button>
+      </div>
+
+      <div class="card">
+        <h2>Emotional Support</h2>
+        <p>Check in with your mood and get supportive messages or breathing exercises.</p>
+        <button>Emotional Check-In</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const quotes = [
+      "Healing takes time, and asking for help is a courageous step.",
+      "You are not a burden. You are a human being with a story.",
+      "Small steps every day lead to big changes.",
+      "You are worthy of rest and renewal.",
+      "Let today be the start of something new.",
+      "Growth is not linear, but it’s always progress.",
+      "You don’t have to have it all figured out to move forward.",
+      "Breathe. You’re doing better than you think.",
+      "You deserve peace, joy, and kindness — especially from yourself.",
+      "Progress is progress, no matter how small."
+    ];
+
+    const randomIndex = new Date().getDate() % quotes.length;
+    document.getElementById('quote-of-the-day').textContent = quotes[randomIndex];
+  </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* === Base Styles === */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url('./background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Keep other animations (like quote) but not for background */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    background-color: transparent;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* === Header Styles === */
+header {
+    text-align: center;
+    margin-bottom: 1rem; /* Decreased space between logo and tagline */
+    position: relative;
+    max-width: 100%;
+}
+
+/* Logo adjustments */
+header img {
+    width: 100%;
+    max-width: 600px !important; /* Increase logo size */
+    height: auto !important;
+    display: block;
+    margin: 0 auto 0.2rem !important; /* Reduced margin for tighter spacing */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* === Daily Insight Section === */
+.daily-insight {
+    margin-top: 2rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem; /* Increased space between daily insight and cards */
+}
+
+/* === Card Grid === */
+.card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Updated to 300px */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Card Styles === */
+.card {
+    background: rgba(255, 255, 255, 0.65); /* More translucent */
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    color: #333;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(173, 216, 230, 0.5);
+    background: rgba(255, 255, 255, 0.8); /* Slightly less transparent on hover */
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #34495e;
+}
+
+/* === Button Styles === */
+button {
+    background-color: #D16D7B; /* Darker pink color */
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #B85C6D; /* Darker pink on hover */
+}
+
+/* === Card Button Styling === */
+.card button {
+    background-color: #D16D7B; /* Matches the button in cards */
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #B85C6D; /* Darker pink on hover */
+    transform: scale(1.05);
+}
+
+/* === Quote Styling === */
+.quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideInQuote 2s ease 2s forwards;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@keyframes slideInQuote {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

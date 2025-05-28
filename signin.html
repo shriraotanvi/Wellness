@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Health</title>
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i> 
+        </div>
+        <h1>Be Healed. <span></span></h1>
+        
+        <form id="loginForm" action="index.html">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            
+            <button type="submit" class="login-btn">Sign In <i class="fas fa-sign-in-alt"></i></button>
+        </form>
+        
+        <div class="signup-link">
+            New here? <a href="signup.html" id="signupLink">Create Account <i class="fas fa-user-plus"></i></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function() {
+            alert("Success! Redirecting to mood tracker...");
+            // In real app, you'd check username/password here
+        });
+    </script>
+</body>
+</html>
